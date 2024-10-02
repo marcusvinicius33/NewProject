@@ -9,22 +9,22 @@
 <body>
     <main>
         <h1> DevClub- Troca Cor</h1>
-        <button>Azul</button>
-        <button>Branco</button>
-        <button>Vermelho</button>
-        <button>Amarelo</button>
-        <button>Verde</button>
-        <button>Cor Aleatória</button>
+        <button onclick="trocarCor('blue')">Azul</button>
+        <button onclick="trocarCor('red')">Vermelho</button>
+        <button onclick="trocarCor('yellow')">Amarelo</button>
+        <button onclick="trocarCor('green')">Verde</button>
+        <button onclick="corAleatoria('')">Cor Aleatória</button>
         <br>
-        <input placeholder="Nome da cor ou #HEX" type="text">
-        <button>Aplicar Cor</button>
-        <input type="color">
+        <input placeholder="Nome da cor ou #HEX" type="text" class="input-cor">
+        <button onclick="aplicarCorPersonalizada()">Aplicar Cor</button>
+        <input type="color" onchange="trocarCor(this.value)">
         <br>
         <label for="">
             Escolha Imagem
-            <input type="file" accept="image/*">
+            <input type="file" accept="image/*" onchange="escolhaImagem(this.files[0])">
         </label>
 
     </main>
 </body>
+<script src="scripts.js"></script>
 </html>
