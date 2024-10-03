@@ -1,4 +1,5 @@
 function trocarCor(cor){
+    document.body.style.backgroundImage = 'none'
     document.body.style.backgroundColor = cor
 }
 
@@ -8,7 +9,7 @@ function corAleatoria(){
     const blue = Math.floor(Math.random() * 255)
     
     document.body.style.backgroundColor = `rgb(${red}, ${green}, ${blue})`
-}
+}//Math.random() gera, um número aleatório, porém gera até mesmo números fracionados. Assim, para gerar apenas números inteiros usa o Math.floor.
 
 function aplicarCorPersonalizada(){
     const corInput = document.querySelector('.input-cor').value
